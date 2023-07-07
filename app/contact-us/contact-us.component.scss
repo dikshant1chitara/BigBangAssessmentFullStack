@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  @import "~bootstrap/scss/bootstrap";
+
+  // Custom styles for the navbar component
+  .navbar {
+    background-color: #343a40;
+    padding: 10px 20px;
+  
+    .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  
+    .navbar-nav {
+      .nav-item {
+        margin-right: 10px;
+  
+        .nav-link {
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #f8f9fa;
+          }
+        }
+      }
+    }
+  }

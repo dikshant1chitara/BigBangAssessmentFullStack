@@ -1,0 +1,145 @@
+.fr {
+    display: block;
+    float: right;
+  }
+  
+  .outer {
+    height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  .panel-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #forgot {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #1a8cff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0066cc;
+  }
+  
+  .panel {
+    min-height: 380px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 100px;
+    background-color: #fff;
+  }
+  
+  .input-field {
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  
+  .input-field.error {
+    border: 1px solid red;
+    color: red;
+  }
+  
+  input[type='text'],
+  input[type='password'] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    color: #333;
+    padding: 5px;
+  }
+  
+  .fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .bordert {
+    border-top: 1px solid #ddd;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  
+  .bordert:after {
+    content: "or connect with";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  @media (max-width: 360px) {
+    #forgot {
+      margin-left: 0;
+      padding-top: 10px;
+    }
+    body {
+      height: 100%;
+    }
+    .container {
+      margin: 30px 0;
+    }
+    .bordert:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Additional CSS for eye icon button and ngtoast */
+  
+  .bg-white {
+    background: none;
+    border: none;
+  }
+  
+  .toast-right-top {
+    height: auto !important;
+  }
+  

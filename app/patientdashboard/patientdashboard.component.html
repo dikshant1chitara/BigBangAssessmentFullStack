@@ -1,0 +1,179 @@
+<!-- HTML structure for the patient dashboard -->
+
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Hello <h3>{{fullName}}</h3></a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <a style="background: red;
+            color: #fff;
+            border-radius: 4px;
+            margin: 10px;" class="nav-link px-3 cursor-pointer" (click)="logout()">Sign out</a>
+        </div>
+    </div>
+  </header>
+
+
+
+  <h2>Doctor List</h2><br>
+  <div class="table-responsive">
+      <table class="table table-striped table-sm">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Firstname</th>
+                  <th scope="col">Lastname</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Email</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let user of Doctors; let i= index">
+                  <td>{{i+1}}</td>
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.email}}</td>
+                  <td><button style="color: rgb(0, 0, 0); border-radius: 3px;">Active</button></td>
+                  <td>
+                    <button style="color: rgb(0, 0, 0); border-radius: 3px;" (click)="redirectToSpecialization()">Take Appointment</button>
+                  </td>
+                  
+              </tr>
+  
+          </tbody>
+      </table>
+  </div>
+  
+  <br><br><br>
+   
+    
+    <h3>Meaningful Pictures</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../../assets/images/01.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Cardiology</h5>
+            <p class="card-text">Take you Appointment directly to doctor</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../../assets/images/02.jpg" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Orthopedics</h5>
+            <p class="card-text">Take you Appointment directly to doctor</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../../assets/images/03.jpg" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Surgery</h5>
+            <p class="card-text">Take you Appointment directly to doctor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+ 
+    
+    <h3>Services</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+            <img src="../../assets/images/services1.jpg" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Service Services</h5>
+            <p class="card-text">Service Emergency services</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+            <img src="../../assets/images/services2.jpg" class="card-img-top" alt="Image 3">
+
+          <div class="card-body">
+            <h5 class="card-title">Service Emergency</h5>
+            <p class="card-text">Special Ward</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="../../assets/images/services3.jpg" class="card-img-top" alt="Image 3">
+
+            <h5 class="card-title">Service 3</h5>
+            <p class="card-text">Well trainned Doctor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <h3>Specialization</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+            <img src="../../assets/images/services4.jpg" class="card-img-top" alt="Image 3">
+
+          <div class="card-body">
+            <h5 class="card-title">Specialization 1</h5>
+            <p class="card-text">Description of Specialization 1.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+            <img src="../../assets/images/17.jpg" class="card-img-top" alt="Image 3">
+
+          <div class="card-body">
+            <h5 class="card-title">Specialization 2</h5>
+            <p class="card-text">Description of Specialization 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+            <img src="../../assets/images/15.jpg" class="card-img-top" alt="Image 3">
+
+          <div class="card-body">
+            <h5 class="card-title">Specialization 3</h5>
+            <p class="card-text">Description of Specialization 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Contact Information</h4>
+          <p>123 Hospital Street, City, Country</p>
+          <p>Phone: 123-456-7890</p>
+          <p>Email: info@hospital.com</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  

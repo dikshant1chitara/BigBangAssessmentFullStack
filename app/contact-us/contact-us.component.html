@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/doctor">Doctor Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/patient">Patient Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Admin Panel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/specialization">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact-us">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+    <form (ngSubmit)="submitForm()" *ngIf="!showThankYou">
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="formData.name" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="formData.email" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="message" class="col-sm-2 col-form-label">Message:</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="message" name="message" [(ngModel)]="formData.message" required></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  
+    <div class="thank-you-message" *ngIf="showThankYou">
+      <h2 class="fade-in">Thank You!</h2>
+      <p class="fade-in">We appreciate your message.</p>
+    </div>
+  </div>
+  

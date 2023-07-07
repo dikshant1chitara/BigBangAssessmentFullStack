@@ -1,0 +1,79 @@
+@import "~bootstrap/scss/bootstrap";
+
+// Custom styles for the navbar component
+.navbar {
+  background-color: #343a40;
+  padding: 10px 20px;
+
+  .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin-right: 10px;
+
+      .nav-link {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #f8f9fa;
+        }
+      }
+    }
+  }
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image-container {
+    flex: 1;
+    margin-right: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .about-us-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto;
+    max-width: 400px; /* Set a maximum width for the image */
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .text-container {
+    flex: 1;
+  }
+  
+  .text-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    font-size: 16px;
+  }
+  
